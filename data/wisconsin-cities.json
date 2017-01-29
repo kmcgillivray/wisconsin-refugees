@@ -1,0 +1,409 @@
+{ "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.392625, 44.278819]},
+      "properties": {"name": "Appleton"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-91.844351, 45.402192]},
+      "properties": {"name": "Barron"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.901486, 43.182611]},
+      "properties": {"name": "Bayside"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.117794, 43.06432]},
+      "properties": {"name": "Brookfield"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.975, 43.174311]},
+      "properties": {"name": "Brown Deer"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.271921, 42.67528]},
+      "properties": {"name": "Burlington"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-91.389337, 44.934888]},
+      "properties": {"name": "Chippewa Falls"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.200425, 43.088224]},
+      "properties": {"name": "Cottage Grove"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.863884, 42.946727]},
+      "properties": {"name": "Cudahy"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-90.439498, 44.952807]},
+      "properties": {"name": "Curtiss"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.077273, 44.4339]},
+      "properties": {"name": "De Pere"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-91.494844, 44.821307]},
+      "properties": {"name": "Eau Claire"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-91.677786, 44.872124]},
+      "properties": {"name": "Elk Mound"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.529895, 42.674941]},
+      "properties": {"name": "Elkhorn"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.425334, 42.985782]},
+      "properties": {"name": "Fitchburg"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.440266, 43.772153]},
+      "properties": {"name": "Fond Du Lac"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.901447, 43.158182]},
+      "properties": {"name": "Fox Point"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.011548, 42.883879]},
+      "properties": {"name": "Franklin"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.927195, 43.126142]},
+      "properties": {"name": "Glendale"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.984169, 44.520676]},
+      "properties": {"name": "Green Bay"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.000857, 42.939993]},
+      "properties": {"name": "Greendale"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.00567, 42.960604]},
+      "properties": {"name": "Greenfield"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.377752, 43.321182]},
+      "properties": {"name": "Hartford"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.335507, 43.102318]},
+      "properties": {"name": "Hartland"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.155341, 44.494371]},
+      "properties": {"name": "Hobart"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-91.269651, 43.971485]},
+      "properties": {"name": "Holmen"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.769814, 44.595478]},
+      "properties": {"name": "Junction City"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.265352, 44.276909]},
+      "properties": {"name": "Kaukauna"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.873696, 42.58474]},
+      "properties": {"name": "Kenosha"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-91.224245, 43.825866]},
+      "properties": {"name": "La Crosse"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.428158, 42.583402]},
+      "properties": {"name": "Lake Geneva"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.316417, 44.289295]},
+      "properties": {"name": "Little Chute"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.430121, 43.087806]},
+      "properties": {"name": "Madison"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.6813, 44.098592]},
+      "properties": {"name": "Manitowoc"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.371058, 43.117416]},
+      "properties": {"name": "Maple Bluff"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-90.173052, 44.663807]},
+      "properties": {"name": "Marshfield"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-90.082332, 43.801304]},
+      "properties": {"name": "Mauston"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.427343, 44.2141]},
+      "properties": {"name": "Menasha"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.121527, 43.159363]},
+      "properties": {"name": "Menomonee Falls"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-91.90957, 44.8892]},
+      "properties": {"name": "Menomonie"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.013696, 43.213118]},
+      "properties": {"name": "Mequon"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.50634, 43.106959]},
+      "properties": {"name": "Middleton"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.966695, 43.063348]},
+      "properties": {"name": "Milwaukee"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.684582, 44.790723]},
+      "properties": {"name": "Mosinee"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.134318, 42.871352]},
+      "properties": {"name": "Muskego"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.475999, 44.167597]},
+      "properties": {"name": "Neenah"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.485461, 43.810965]},
+      "properties": {"name": "North Fond Du Lac"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.900765, 42.880237]},
+      "properties": {"name": "Oak Creek"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.492688, 43.100435]},
+      "properties": {"name": "Oconomowoc"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-91.201506, 43.890467]},
+      "properties": {"name": "Onalaska"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.562352, 44.022628]},
+      "properties": {"name": "Oshkosh"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.252593, 43.08677]},
+      "properties": {"name": "Pewaukee"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.537971, 44.46202]},
+      "properties": {"name": "Plover"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.807086, 42.728284]},
+      "properties": {"name": "Racine"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-91.745772, 45.481941]},
+      "properties": {"name": "Rice Lake"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.234017, 43.23939]},
+      "properties": {"name": "Richfield"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.61227, 44.874158]},
+      "properties": {"name": "Rothschild"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.873106, 42.971636]},
+      "properties": {"name": "Saint Francis"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.61458, 44.918281]},
+      "properties": {"name": "Schofield"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.730546, 43.746002]},
+      "properties": {"name": "Sheboygan"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.826235, 43.729337]},
+      "properties": {"name": "Sheboygan Falls"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.886625, 43.091325]},
+      "properties": {"name": "Shorewood"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.129354, 45.187097]},
+      "properties": {"name": "Sister Bay"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.862312, 42.912643]},
+      "properties": {"name": "South Milwaukee"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.553718, 44.525481]},
+      "properties": {"name": "Stevens Point"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.224173, 42.921988]},
+      "properties": {"name": "Stoughton"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.235717, 43.181961]},
+      "properties": {"name": "Sun Prairie"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.223138, 43.136247]},
+      "properties": {"name": "Sussex"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.975922, 43.236704]},
+      "properties": {"name": "Thiensville"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.57643, 44.153686]},
+      "properties": {"name": "Two Rivers"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.596718, 42.531128]},
+      "properties": {"name": "Walworth"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.716667, 43.2]},
+      "properties": {"name": "Watertown"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.245062, 43.009084]},
+      "properties": {"name": "Waukesha"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.643486, 44.961866]},
+      "properties": {"name": "Wausau"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.03557, 43.063119]},
+      "properties": {"name": "Wauwatosa"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.181696, 43.418812]},
+      "properties": {"name": "West Bend"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-91.087453, 43.898534]},
+      "properties": {"name": "West Salem"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.549651, 44.89122]},
+      "properties": {"name": "Weston"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.900554, 43.113251]},
+      "properties": {"name": "Whitefish Bay"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-89.82674, 44.392924]},
+      "properties": {"name": "Wisconsin Rapids"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-88.166667, 44.333333]},
+      "properties": {"name": "Wrightstown"}
+    }
+  ]
+}
