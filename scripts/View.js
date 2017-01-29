@@ -20,7 +20,7 @@ View.prototype.drawResults = function(dataset) {
   //     return d.count + "px";
   //   });
 
-  d3.json("/data/wisconsin-cities.json", function(error, cities) {
+  d3.json("data/wisconsin-cities.json", function(error, cities) {
    if (error) throw error;
 
    var citiesObj = {};
@@ -91,7 +91,7 @@ View.prototype.drawResults = function(dataset) {
 View.prototype.drawMap = function() {
   var data = d3.dispatch("load");
 
-  d3.json("/data/wisconsin.json", function(error, wi) {
+  d3.json("data/wisconsin.json", function(error, wi) {
     if (error) throw error;
     data.call("load", this, wi);
   });

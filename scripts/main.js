@@ -25,7 +25,7 @@ var dataUtils = new DataUtils();
 var view = new View();
 var data = d3.dispatch("load");
 
-d3.csv('/data/2002-2017-wisconsin-refugees-arrivals-by-destination-and-nationality.csv', function(error, d) {
+d3.csv('data/2002-2017-wisconsin-refugees-arrivals-by-destination-and-nationality.csv', function(error, d) {
   if (error) {
     throw error;
   }
