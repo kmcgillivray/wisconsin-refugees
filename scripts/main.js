@@ -43,12 +43,24 @@ function init() {
   data.on("load", function(data) {
     view.prepareCanvases();
     view.drawMaps();
-    query = new Query({
-      startYear: 2002,
-      endYear: 2007
-    }, ["Laos"]);
-    query.query(data, locationsVis.drawResults);
+    query = new Query(data);
+    query.query();
   });
 }
+
+// var startYearSelect = document.getElementById("start-year");
+// startYearSelect.addEventListener("change", function() {
+//   query.years.startYear = this.value;
+//   query.query();
+// });
+var nationalitySelect = document.getElementById("nationality-select");
+nationalitySelect.addEventListener("change", function() {
+  if (this.value == "All countries") {
+    query.nationalities = null;
+  } else {
+    query.nationalities = [this.value];
+  }
+  query.query();
+});
 
 init();

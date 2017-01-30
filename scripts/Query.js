@@ -1,4 +1,5 @@
-function Query(years, nationalities) {
+function Query(data, years, nationalities) {
+  this.dataset = data;
   this.years = years || {
     startYear: 2002,
     endYear: 2016
@@ -34,7 +35,9 @@ Query.prototype.getYearData = function(dataset) {
   return yearData;
 }
 
-Query.prototype.query = function(dataset, callback) {
+Query.prototype.query = function(callback) {
+  var dataset = this.dataset;
+  callback = callback || locationsVis.drawResults;
   if (this.nationalities) {
     dataset = this.getNationalityData(dataset);
   }

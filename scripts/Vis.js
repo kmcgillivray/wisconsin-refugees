@@ -90,7 +90,9 @@ function Vis(className, isProportional) {
 
      var citiesObj = generateCitiesObject(cities);
 
-     var maxWidth = 200;
+     var maxWidth = window.innerWidth / 10;
+
+     self.canvas.selectAll("g").remove();
 
      var markers = self.canvas.selectAll("g.marker")
                               .data(query.cityArr);
@@ -152,8 +154,8 @@ function Vis(className, isProportional) {
              return 0;
            }
          })
-         .style("fill", "#9ed5f6")
-         .style("stroke", "#FFF")
+         .style("fill", "rgba(150, 204, 255, 0.5)")
+         .style("stroke", "#317ec6")
          .style("stroke-width", "2px")
          .style("opacity", 0.5);
     });

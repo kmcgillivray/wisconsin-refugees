@@ -23,7 +23,7 @@ View.prototype.drawMaps = function() {
     this.projection = d3.geoConicConformal()
                         .parallels([45 + 34 / 60, 46 + 46 / 60])
                         .rotate([90, -45 - 10 / 60])
-                        .fitSize([window.innerWidth, window.innerHeight - 60], wi);
+                        .fitSize([(window.innerWidth * 0.6) - 100, window.innerHeight], wi);
     d3.selectAll("svg").append("path")
        .datum(wi)
        .attr("d", d3.geoPath(this.projection))
@@ -33,6 +33,6 @@ View.prototype.drawMaps = function() {
 
 View.prototype.prepareCanvases = function() {
   d3.selectAll("svg")
-    .attr("width", window.innerWidth)
-    .attr("height", window.innerHeight);
+    .attr("width", window.innerWidth * .6)
+    .attr("height", window.innerHeight + 100);
 }

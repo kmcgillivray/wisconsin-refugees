@@ -10,14 +10,77 @@
     <div class="pa3 measure-wide center">
       <h1 class="tc bg-light-blue white dib pa3 mb0 br3 lh-title">Refugee Resettlement in Wisconsin, 2002–2016</h1>
     </div>
-    <div class="ph4 measure">
-      <div class="mt5">
-        <p class="f3 gray lh-title">From <span id="years" class="b light-blue">2002—2016</span>, <span id="total-count" class="b light-blue">X refugees</span> from <span id="nationalities" class="b light-blue">X countries</span> resettled in <span id="number-of-locations" class="b light-blue">X cities and towns</span> in Wisconsin.</p>
+    <div class="cf">
+      <div class="pr5 w-40 fr">
+        <div class="mt3">
+          <p class="f3 gray lh-title">From <span id="years" class="b light-blue">2002—2016</span>, <span id="total-count" class="b light-blue">X refugees</span> from <span id="nationalities" class="b light-blue">X countries</span> resettled in <span id="number-of-locations" class="b light-blue">X cities and towns</span> in Wisconsin.</p>
 
-        <p class="f3 gray lh-title">During this period, <span id="highest-city" class="b light-blue">Milwaukee</span> had the most settlements from these countries <span id="highest-city-count" class="b light-blue">(8,000 / 80%)</span>. The most refugees came from <span id="highest-nationality" class="b light-blue">X</span> <span id="highest-nationality-count" class="b light-blue">(8,000 / 80%)</span>. </p>
+          <p class="f3 gray lh-title">During this period, <span id="highest-city" class="b light-blue">Milwaukee</span> had the most settlements from these countries <span id="highest-city-count" class="b light-blue">(8,000 / 80%)</span>. The most refugees came from <span id="highest-nationality" class="b light-blue">X</span> <span id="highest-nationality-count" class="b light-blue">(8,000 / 80%)</span>.</p>
+        </div>
+        <!-- <label for="start-year">Start year</label>
+        <select id="start-year">
+          <option selected>2002</option>
+          <option>2003</option>
+          <option>2004</option>
+          <option>2005</option>
+          <option>2006</option>
+          <option>2007</option>
+          <option>2008</option>
+          <option>2009</option>
+          <option>2010</option>
+          <option>2011</option>
+          <option>2012</option>
+          <option>2013</option>
+          <option>2014</option>
+          <option>2015</option>
+          <option>2016</option>
+        </select> -->
+        <label class="dn" for="nationality-select">Nationalities</label>
+        <select class="db w-100" id="nationality-select">
+          <option selected>All countries</option>
+          <option>Afghanistan</option>
+          <option>Albania</option>
+          <option>Azerbaijan</option>
+          <option>Belarus</option>
+          <option>Bhutan</option>
+          <option>Bosnia and Herzegovina</option>
+          <option>Burma</option>
+          <option>Burundi</option>
+          <option>China</option>
+          <option>Colombia</option>
+          <option>Croatia</option>
+          <option>Cuba</option>
+          <option>Dem. Rep. Congo</option>
+          <option>Eritrea</option>
+          <option>Ethiopia</option>
+          <option>Iran</option>
+          <option>Iraq</option>
+          <option>Ivory Coast</option>
+          <option>Laos</option>
+          <option>Liberia</option>
+          <option>Moldova</option>
+          <option>Nepal</option>
+          <option>Pakistan</option>
+          <option>Palestine</option>
+          <option>Russia</option>
+          <option>Rwanda</option>
+          <option>Serbia</option>
+          <option>Sierra Leone</option>
+          <option>Somalia</option>
+          <option>Sri Lanka (Ceylon)</option>
+          <option>Sudan</option>
+          <option>Syria</option>
+          <option>Thailand</option>
+          <option>Uganda</option>
+          <option>Ukraine</option>
+          <option>Uzbekistan</option>
+          <option>Vietnam</option>
+        </select>
+      </div>
+      <div class="pl5 fr w-60">
+        <svg class="locations"></svg>
       </div>
     </div>
-    <svg class="locations"></svg>
     <!-- <p class="ph3 tc f6 gray lh-title">Fig. 1 – All cities and towns with at least one refugee resettlement, 2002–2016.</p>
 
     <div class="measure-wide center mt5">
