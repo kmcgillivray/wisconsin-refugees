@@ -1,36 +1,53 @@
-function Query() {
-
+function Query(years, nationalities) {
+  this.years = years || {
+    startYear: 2002,
+    endYear: 2016
+  };
+  this.nationalities = nationalities;
+  this.cityArr = null;
+  this.highestCity = null;
+  this.totalRefugees = 0;
+  this.nationalityArr = null;
+  this.highestNationality = null;
 }
 
-Query.prototype.getNationalityData = function(nationalities, dataset) {
+Query.prototype.getNationalityData = function(dataset) {
   var nationalityData = [];
   for (var i = 0; i < dataset.length; i++) {
-    if (nationalities.includes(dataset[i].nationality)) {
+    if (this.nationalities.includes(dataset[i].nationality)) {
       nationalityData.push(dataset[i]);
     }
   }
   return nationalityData;
 }
 
-Query.prototype.getYearData = function(years, dataset) {
+Query.prototype.getYearData = function(dataset) {
   var yearData = [];
   for (var i = 0; i < dataset.length; i++) {
-    if (years.includes(dataset[i].calendarYear)) {
+    var dataPoint = dataset[i];
+    var dataPointYear = parseInt(dataPoint.calendarYear);
+    var isInRange = dataPointYear >= this.years.startYear && dataPointYear <= this.years.endYear;
+    if (isInRange) {
       yearData.push(dataset[i]);
     }
   }
   return yearData;
 }
 
-Query.prototype.query = function(dataset, years, nationalities, callback) {
-  callback = callback || view.drawResults;
-  dataset = dataset || data;
-  if (nationalities) {
-    dataset = this.getNationalityData(nationalities, dataset);
+Query.prototype.query = function(dataset, callback) {
+  if (this.nationalities) {
+    dataset = this.getNationalityData(dataset);
   }
-  if (years) {
-    dataset = this.getYearData(years, dataset);
+  if (this.years) {
+    dataset = this.getYearData(dataset);
   }
+  var cityObj = dataUtils.generateCityObject(dataset);
+  this.cityArr = dataUtils.convertToCityArray(cityObj);
+  this.highestCity = dataUtils.findHighestValue(this.cityArr);
+  this.totalRefugees = dataUtils.countAll(this.cityArr);
+  var nationalityObj = dataUtils.generateNationalityObject(dataset);
+  this.nationalityArr = dataUtils.convertToNationalityArray(nationalityObj);
+  this.highestNationality = dataUtils.findHighestValue(this.nationalityArr);
   console.log(dataset);
   callback(dataset);
   // writeData(dataset);

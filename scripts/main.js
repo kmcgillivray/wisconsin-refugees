@@ -11,28 +11,44 @@
 //   countTotals
 //   convertToArray
 
-// Drawing functions
-//   drawMap
+// View functions
+//   drawMaps
 //   drawResults / writeData
+//   prepareCanvases
+
+// Vis
+
 
 // Setup steps
 //   Load data
-//   Draw map
+//   Prepare canvases
+//   Draw maps
 //   Do first query
 
-var query = new Query();
+var query = null;
 var dataUtils = new DataUtils();
 var view = new View();
 var data = d3.dispatch("load");
 
-d3.csv('data/2002-2017-wisconsin-refugees-arrivals-by-destination-and-nationality.csv', function(error, d) {
-  if (error) {
-    throw error;
-  }
-  data.call("load", this, d);
-});
+var locationsVis = new Vis('.locations', true);
 
-data.on("load", function(data) {
-  view.drawMap();
-  query.query(data, null, null, view.drawResults);
-});
+function init() {
+  var dataFile = 'data/2002-2017-wisconsin-refugees-arrivals-by-destination-and-nationality.csv';
+
+  d3.csv(dataFile, function(error, d) {
+    if (error) { throw error; }
+    data.call("load", this, d);
+  });
+
+  data.on("load", function(data) {
+    view.prepareCanvases();
+    view.drawMaps();
+    query = new Query({
+      startYear: 2002,
+      endYear: 2007
+    }, ["Laos"]);
+    query.query(data, locationsVis.drawResults);
+  });
+}
+
+init();
