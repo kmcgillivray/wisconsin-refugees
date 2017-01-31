@@ -75,11 +75,8 @@ DataUtils.prototype.convertToNationalityArray = function(dataObj) {
       name: nationality,
       count: dataObj[nationality]
     };
-    if (nationalityObj.count > 0) {
-      data.push(nationalityObj);
-    }
+    data.push(nationalityObj);
   }
-  console.log(data);
   return data;
 }
 
@@ -91,7 +88,6 @@ DataUtils.prototype.findHighestValue = function(dataArr) {
       highestValue = dataArr[i];
     }
   }
-  console.log(highestValue);
   return highestValue;
 }
 

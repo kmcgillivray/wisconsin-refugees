@@ -35,6 +35,10 @@ Query.prototype.getYearData = function(dataset) {
   return yearData;
 }
 
+Query.prototype.setYears = function(years) {
+  this.years = years;
+}
+
 Query.prototype.query = function(callback) {
   var dataset = this.dataset;
   callback = callback || locationsVis.drawResults;
@@ -51,7 +55,5 @@ Query.prototype.query = function(callback) {
   var nationalityObj = dataUtils.generateNationalityObject(dataset);
   this.nationalityArr = dataUtils.convertToNationalityArray(nationalityObj);
   this.highestNationality = dataUtils.findHighestValue(this.nationalityArr);
-  console.log(dataset);
   callback(dataset);
-  // writeData(dataset);
 }

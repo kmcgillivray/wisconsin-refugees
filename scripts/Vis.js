@@ -33,10 +33,22 @@ function Vis(className, isProportional) {
 
     view.locationCountDisplay.innerText = (function() {
       var count = query.cityArr.length;
+      var classes = view.highestInfo.classList;
+
+      if (count <= 1) {
+        if (!classes.contains("dn")) {
+          classes.add("dn");
+        }
+      }
       if (count > 1) {
+        if (classes.contains("dn")) {
+          classes.remove("dn");
+        }
         return count + " cities and towns ";
-      } else {
+      } else if (count == 1) {
         return " one city ";
+      } else {
+        return "0 locations";
       }
     })();
 
@@ -50,20 +62,65 @@ function Vis(className, isProportional) {
       }
     })();
 
+    view.countriesList.innerHTML = (function() {
+      var nationalityArr = query.nationalityArr;
+      nationalityArr.sort(function(a,b) {
+        return b.count - a.count;
+      });
+      var str = "<ul class='gray list pl0 mv0'>";
+      for (var i = 0; i < nationalityArr.length; i++) {
+        var country = nationalityArr[i];
+        if (country.count > 0) {
+          str += "<li class='mb2'><span class='b'>" + country.name + ":</span> " + country.count +  "</li>";
+        }
+      }
+      str += "</ul>";
+      return str;
+    })();
+
+    view.citiesList.innerHTML = (function() {
+      var cityArr = query.cityArr;
+      cityArr.sort(function(a,b) {
+        return b.count - a.count;
+      });
+      var str = "<ul class='gray list pl0 mv0'>";
+      for (var i = 0; i < cityArr.length; i++) {
+        var city = cityArr[i];
+        str += "<li class='mb2'><span class='b'>" + city.name + ":</span> " + city.count +  "</li>";
+      }
+      str += "</ul>";
+      return str;
+    })();
+
     view.nationalityCountDisplay.innerText = (function() {
-      var nationalityCount = query.nationalityArr.length;
-      if (nationalityCount > 1) {
-        return nationalityCount + " countries";
+      // If the list of countries isn't filtered
+      if (!query.nationalities || query.nationalities.length == 37) {
+        // count the number of countries with refugees
+        var count = 0;
+        for (var i = 0; i < query.nationalityArr.length; i++) {
+          var country = query.nationalityArr[i];
+          if (country.count > 0) {
+            count++;
+          }
+        }
+        return count + " countries";
       } else {
-        return query.nationalityArr[0].name;
+        var nationalityCount = query.nationalityArr.length;
+        if (nationalityCount == 1) {
+          return query.nationalityArr[0].name;
+        } else {
+          return nationalityCount + " selected countries";
+        }
       }
     })();
 
     view.totalCountDisplay.innerText = (function() {
       if (query.totalRefugees > 1) {
         return format.to(query.totalRefugees) + " refugees";
-      } else {
+      } else if (query.totalRefugees == 1){
         return "one refugee";
+      } else {
+        return "0 refugees";
       }
     })();
 

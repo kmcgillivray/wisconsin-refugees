@@ -1,6 +1,7 @@
 function View() {
   this.projection = null;
   this.canvas = null;
+
   this.locationCountDisplay = document.getElementById("number-of-locations");
   this.yearDisplay = document.getElementById("years");
   this.nationalityCountDisplay = document.getElementById("nationalities");
@@ -9,10 +10,26 @@ function View() {
   this.highestCityCount = document.getElementById("highest-city-count");
   this.highestNationalityName = document.getElementById("highest-nationality");
   this.highestNationalityCount = document.getElementById("highest-nationality-count");
+
   this.yearSlider = document.getElementById("slider");
-  this.visContainer = document.getElementById("vis-container")
+  this.nationalitySelect = document.getElementsByClassName("nationality-select");
+
+  this.nationalitiesToggle = document.getElementById("nationalities-toggle");
+  this.nationalitiesMenu = document.getElementById("nationalities-menu");
+  this.nationalitiesClose = document.getElementById("nationalities-close");
+  this.yearsToggle = document.getElementById("years-toggle");
+  this.yearsMenu = document.getElementById("years-menu");
+
+  this.selectAll = document.getElementById("select-all");
+  this.selectNone = document.getElementById("select-none");
+
+  this.visContainer = document.getElementById("vis-container");
   this.width = this.visContainer.offsetWidth;
-  this.height = this.visContainer.offsetWidth;
+  this.height = this.visContainer.offsetWidth + 20;
+
+  this.countriesList = document.getElementById("countries-list");
+  this.citiesList = document.getElementById("cities-list");
+  this.highestInfo = document.getElementById("highest-info");
 }
 
 View.prototype.drawMaps = function() {
@@ -24,7 +41,6 @@ View.prototype.drawMaps = function() {
   });
 
   var self = this;
-  console.log(self.width);
 
   data.on("load", function(wi) {
     this.projection = d3.geoConicConformal()
@@ -35,6 +51,18 @@ View.prototype.drawMaps = function() {
        .datum(wi)
        .attr("d", d3.geoPath(this.projection))
        .style("fill", "#E7E7E7");
+  });
+}
+
+View.prototype.createSlider = function(element) {
+  noUiSlider.create(element, {
+    start: [2002, 2016],
+    tooltips: [ wNumb({ decimals: 0 }), wNumb({ decimals: 0 }) ],
+    connect: true,
+    range: {
+      'min': 2002,
+      'max': 2016
+    }
   });
 }
 
