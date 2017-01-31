@@ -1,16 +1,30 @@
-svg {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
 circle {
   cursor: pointer;
 }
 .noUi-connect {
-  background: rgba(150, 204, 255, 0.5);
+  background: #96ccff;
   box-shadow: none;
 }
+.noUi-horizontal {
+  height: 10px;
+}
 .noUi-horizontal .noUi-tooltip {
-  bottom: -150%;
+  bottom: -170%;
+  color: #96ccff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 3px solid #96ccff;
+}
+.noUi-horizontal .noUi-handle {
+  height: 30px;
+  width: 30px;
+  left: -15px;
+  top: -10px;
+  border: 3px solid #96ccff;
+}
+.noUi-handle:after, .noUi-handle:before {
+  display: none;
+}
+.noUi-handle {
+  border-radius: 50%;
 }

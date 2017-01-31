@@ -1,124 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wisconsin Refugees 2002-2016</title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.2.0/nouislider.min.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body class="avenir">
-    <div class="pa3 measure-wide center">
-      <h1 class="tc bg-light-blue white dib pa3 mb0 br3 lh-title">Refugee Resettlement in Wisconsin, 2002–2016</h1>
+    <div class="pa2 mb3 bg-light-blue tc">
+      <h1 class="f4 white mv0 lh-title">Refugee Resettlement in Wisconsin, 2002–2016</h1>
     </div>
-    <div class="cf">
-      <div class="pr5 w-40 fr">
-        <div class="mt3">
-          <p class="f3 gray lh-title"><span id="years">From <span class="b light-blue">2002—2016</span></span>, <span id="total-count" class="b light-blue">X refugees</span> from <span id="nationalities" class="b light-blue">X countries</span> resettled in <span id="number-of-locations" class="b light-blue">X cities and towns</span> in Wisconsin.</p>
-
-          <p class="f3 gray lh-title">During this period, <span id="highest-city" class="b light-blue">Milwaukee</span> had the most settlements from these countries <span id="highest-city-count" class="b light-blue">(8,000 / 80%)</span>. The most refugees came from <span id="highest-nationality" class="b light-blue">X</span> <span id="highest-nationality-count" class="b light-blue">(8,000 / 80%)</span>.</p>
-        </div>
-        <!-- <label for="start-year">Start year</label>
-        <select id="start-year">
-          <option selected>2002</option>
-          <option>2003</option>
-          <option>2004</option>
-          <option>2005</option>
-          <option>2006</option>
-          <option>2007</option>
-          <option>2008</option>
-          <option>2009</option>
-          <option>2010</option>
-          <option>2011</option>
-          <option>2012</option>
-          <option>2013</option>
-          <option>2014</option>
-          <option>2015</option>
-          <option>2016</option>
-        </select> -->
-        <label class="dn" for="nationality-select">Nationalities</label>
-        <select class="db w-100" id="nationality-select">
-          <option selected>All countries</option>
-          <option>Afghanistan</option>
-          <option>Albania</option>
-          <option>Azerbaijan</option>
-          <option>Belarus</option>
-          <option>Bhutan</option>
-          <option>Bosnia and Herzegovina</option>
-          <option>Burma</option>
-          <option>Burundi</option>
-          <option>China</option>
-          <option>Colombia</option>
-          <option>Croatia</option>
-          <option>Cuba</option>
-          <option>Dem. Rep. Congo</option>
-          <option>Eritrea</option>
-          <option>Ethiopia</option>
-          <option>Iran</option>
-          <option>Iraq</option>
-          <option>Ivory Coast</option>
-          <option>Laos</option>
-          <option>Liberia</option>
-          <option>Moldova</option>
-          <option>Nepal</option>
-          <option>Pakistan</option>
-          <option>Palestine</option>
-          <option>Russia</option>
-          <option>Rwanda</option>
-          <option>Serbia</option>
-          <option>Sierra Leone</option>
-          <option>Somalia</option>
-          <option>Sri Lanka (Ceylon)</option>
-          <option>Sudan</option>
-          <option>Syria</option>
-          <option>Thailand</option>
-          <option>Uganda</option>
-          <option>Ukraine</option>
-          <option>Uzbekistan</option>
-          <option>Vietnam</option>
-        </select>
-        <div class="mt3" id="slider"></div>
-      </div>
-      <div class="pl5 fr w-60">
-        <svg class="locations"></svg>
+    <div class="ph3 tc">
+      <button id="nationalities-toggle" class="dib mb2 bg-light-blue br-pill pv2 ph3 white b bn pointer dim">Filter countries</button>
+      <button id="years-toggle" class="dib mb2 bg-light-blue br-pill pv2 ph3 white b bn pointer dim">Filter years</button>
+      <div id="years-menu" class="ph4 mt3 mb4 dn">
+        <div id="slider"></div>
       </div>
     </div>
-    <!-- <p class="ph3 tc f6 gray lh-title">Fig. 1 – All cities and towns with at least one refugee resettlement, 2002–2016.</p>
-
-    <div class="measure-wide center mt5">
-      <h2 class="light-blue">How many were there?</h2>
-      <p class="f3 gray lh-title">From 2002–2016, a total of <span class="b light-blue">20,000 refugees</span> settled in Wisconsin. The majority of them, <span class="b light-blue">17,000 (80%), settled in Milwaukee</span>.</p>
+    <div class="pa3 dn bg-white" id="nationalities-menu">
+      <!-- <button>Select all</button>
+      <button>Select none</button> -->
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Afghanistan" type="checkbox"> Afghanistan</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Albania" type="checkbox"> Albania</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Azerbaijan" type="checkbox"> Azerbaijan</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Belarus" type="checkbox"> Belarus</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Bhutan" type="checkbox"> Bhutan</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Bosnia and Herzegovina" type="checkbox"> Bosnia and Herzegovina</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Burma" type="checkbox"> Burma</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Burundi" type="checkbox"> Burundi</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="China" type="checkbox"> China</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Colombia" type="checkbox"> Colombia</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Croatia" type="checkbox"> Croatia</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Cuba" type="checkbox"> Cuba</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Dem. Rep. Congo" type="checkbox"> Dem. Rep. Congo</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Eritrea" type="checkbox"> Eritrea</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Ethiopia" type="checkbox"> Ethiopia</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Iran" type="checkbox"> Iran</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Iraq" type="checkbox"> Iraq</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Ivory Coast" type="checkbox"> Ivory Coast</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Laos" type="checkbox"> Laos</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Liberia" type="checkbox"> Liberia</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Moldova" type="checkbox"> Moldova</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Nepal" type="checkbox"> Nepal</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Pakistan" type="checkbox"> Pakistan</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Palestine" type="checkbox"> Palestine</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Russia" type="checkbox"> Russia</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Rwanda" type="checkbox"> Rwanda</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Serbia" type="checkbox"> Serbia</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Sierra Leone" type="checkbox"> Sierra Leone</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Somalia" type="checkbox"> Somalia</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Sri Lanka (Ceylon)" type="checkbox"> Sri Lanka (Ceylon)</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Sudan" type="checkbox"> Sudan</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Syria" type="checkbox"> Syria</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Thailand" type="checkbox"> Thailand</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Uganda" type="checkbox"> Uganda</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Ukraine" type="checkbox"> Ukraine</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Uzbekistan" type="checkbox"> Uzbekistan</label>
+      <label class="db mb2 f6"><input checked class="nationality-select" value="Vietnam" type="checkbox"> Vietnam</label>
     </div>
-    <svg class="population"></svg>
-    <p class="ph3 tc f6 gray lh-title">Fig. 1 – All cities and towns with at least one refugee resettlement, 2002–2016.</p>
 
-    <div class="measure-wide center bl b--light-gray bw1 pl3 mt5">
-      <h2>Where did they come from? Who settled where and when?</h2>
-      <p class="f3 light-blue lh-title">Test.</p>
+    <div id="vis-container" class="mw6 center">
+      <svg class="locations" preserveAspectRatio="xMidYMid meet"></svg>
     </div>
-    <svg class="number-of-cities"></svg>
-    <p class="ph3 tc f6 gray lh-title">Fig. 1 – All cities and towns with at least one refugee resettlement, 2002–2016.</p>
+    <div class="ph3">
+      <p class="gray lh-title"><span id="years">From <span class="b light-blue">2002—2016</span></span>, <span id="total-count" class="b light-blue">X refugees</span> from <span id="nationalities" class="b light-blue">X countries</span> resettled in <span id="number-of-locations" class="b light-blue">X cities and towns</span> in Wisconsin.</p>
 
-    <div class="measure-wide center bl b--light-gray bw1 pl3 mt5">
-      <h2>How many are in the groups directly affected by the recent Trump administration actions?</h2>
-      <p class="f3 light-blue lh-title">Test.</p>
+      <p class="gray lh-title">During this period, <span id="highest-city" class="b light-blue">Milwaukee</span> had the most settlements from these countries <span id="highest-city-count" class="b light-blue">(8,000 / 80%)</span>. The most refugees came from <span id="highest-nationality" class="b light-blue">X</span> <span id="highest-nationality-count" class="b light-blue">(8,000 / 80%)</span>.</p>
     </div>
-    <svg class="number-of-cities"></svg>
-    <p class="ph3 tc f6 gray lh-title">Fig. 1 – All cities and towns with at least one refugee resettlement, 2002–2016.</p> -->
 
-    <div class="bg-light-blue">
-      <div class="measure-wide center mt5 pa3">
-        <p>Data from...</p>
-        <p>Source code at...</p>
-        <p>Other references...(Wiscontext)</p>
-        <p>Made by Kevin McGillivray on January 29th, 2017.</p>
-      </div>
+
+    <div class="bg-light-blue mt5 pa3">
+      <h2>Sources</h2>
+      <ul class="list pl0">
+        <li class="mb2"><a target="_blank" class="link white" href="http://www.wrapsnet.org">Refugee Processing Center</a> (<a target="_blank" class="link white" href="http://ireports.wrapsnet.org">Database</a>, <a class="link white" href="data/arrivals-by-destination-and-nationality.pdf">PDF</a>)</li>
+        <li class="mb2"><a target="_blank" class="link white" href="http://www.wiscontext.org/refugee-resettlement-wisconsin-numbers">Wiscontext</a></li>
+      </ul>
+      <p>Made by <a target="_blank" class="link white" href="http://kevinmcgillivray.net/about">Kevin McGillivray</a> on January 29th, 2017. <a target="_blank" class="link white" href="http://github.com/kmcgillivray/wisconsin-refugees">Source code on GitHub</a></p>
     </div>
 
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.2.0/nouislider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.0.4/wNumb.min.js"></script>
-    <!-- <script src="https://d3js.org/topojson.v2.min.js"></script> -->
     <script src="scripts/Query.js"></script>
     <script src="scripts/DataUtils.js"></script>
     <script src="scripts/View.js"></script>

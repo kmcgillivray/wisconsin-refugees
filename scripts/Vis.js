@@ -27,6 +27,10 @@ function Vis(className, isProportional) {
 
   this.drawResults = function(dataset) {
 
+    var format = wNumb({
+    	thousand: ','
+    });
+
     view.locationCountDisplay.innerText = (function() {
       var count = query.cityArr.length;
       if (count > 1) {
@@ -57,7 +61,7 @@ function Vis(className, isProportional) {
 
     view.totalCountDisplay.innerText = (function() {
       if (query.totalRefugees > 1) {
-        return query.totalRefugees + " refugees";
+        return format.to(query.totalRefugees) + " refugees";
       } else {
         return "one refugee";
       }
@@ -71,7 +75,7 @@ function Vis(className, isProportional) {
       var count = query.highestCity.count;
       var total = query.totalRefugees;
       var percent = Math.round((count / total) * 100);
-      return "(" + count + " / " + percent + "%)";
+      return "(" + format.to(count) + " / " + percent + "%)";
     })();
 
     view.highestNationalityName.innerText = (function() {
@@ -82,7 +86,7 @@ function Vis(className, isProportional) {
       var count = query.highestNationality.count;
       var total = query.totalRefugees;
       var percent = Math.round((count / total) * 100);
-      return "(" + count + " / " + percent + "%)";
+      return "(" + format.to(count) + " / " + percent + "%)";
     })();
 
     d3.json("data/wisconsin-cities.json", function(error, cities) {
@@ -90,7 +94,7 @@ function Vis(className, isProportional) {
 
      var citiesObj = generateCitiesObject(cities);
 
-     var maxWidth = window.innerWidth / 10;
+     var maxWidth = view.width / 5;
 
      self.canvas.selectAll("g").remove();
 

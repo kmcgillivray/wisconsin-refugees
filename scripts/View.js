@@ -10,6 +10,9 @@ function View() {
   this.highestNationalityName = document.getElementById("highest-nationality");
   this.highestNationalityCount = document.getElementById("highest-nationality-count");
   this.yearSlider = document.getElementById("slider");
+  this.visContainer = document.getElementById("vis-container")
+  this.width = this.visContainer.offsetWidth;
+  this.height = this.visContainer.offsetWidth;
 }
 
 View.prototype.drawMaps = function() {
@@ -20,11 +23,14 @@ View.prototype.drawMaps = function() {
     data.call("load", this, wi);
   });
 
+  var self = this;
+  console.log(self.width);
+
   data.on("load", function(wi) {
     this.projection = d3.geoConicConformal()
                         .parallels([45 + 34 / 60, 46 + 46 / 60])
                         .rotate([90, -45 - 10 / 60])
-                        .fitSize([(window.innerWidth * 0.6) - 100, window.innerHeight], wi);
+                        .fitExtent([[30, -30], [self.width - 70, self.height]], wi);
     d3.selectAll("svg").append("path")
        .datum(wi)
        .attr("d", d3.geoPath(this.projection))
@@ -34,6 +40,7 @@ View.prototype.drawMaps = function() {
 
 View.prototype.prepareCanvases = function() {
   d3.selectAll("svg")
-    .attr("width", window.innerWidth * .6)
-    .attr("height", window.innerHeight + 100);
+    .attr("width", this.width)
+    .attr("height", this.height)
+    .attr("viewBox", "0 0 " + this.width + " " + this.height);
 }
