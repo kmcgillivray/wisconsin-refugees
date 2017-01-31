@@ -30,6 +30,7 @@
 // Animate circle changes
 // Toggle between range and single year slider
 // bar charts for boxes?
+// toggle between cities and nationalities
 
 var query = null;
 var dataUtils = new DataUtils();
@@ -106,10 +107,16 @@ function setupMenu() {
   });
 
   view.nationalityCountDisplay.addEventListener("click", function() {
+    if (!view.citiesList.classList.contains("dn")) {
+      toggleMenu(view.citiesList);
+    }
     toggleMenu(view.countriesList);
   });
 
   view.locationCountDisplay.addEventListener("click", function() {
+    if (!view.countriesList.classList.contains("dn")) {
+      toggleMenu(view.countriesList);
+    }
     toggleMenu(view.citiesList);
   });
 

@@ -67,7 +67,7 @@ function Vis(className, isProportional) {
       nationalityArr.sort(function(a,b) {
         return b.count - a.count;
       });
-      var str = "<ul class='gray list pl0 mv0'>";
+      var str = "<h3 class='light-blue mt0'>Nationalities</h3><ul class='gray list pl0 mv0'>";
       for (var i = 0; i < nationalityArr.length; i++) {
         var country = nationalityArr[i];
         if (country.count > 0) {
@@ -83,7 +83,7 @@ function Vis(className, isProportional) {
       cityArr.sort(function(a,b) {
         return b.count - a.count;
       });
-      var str = "<ul class='gray list pl0 mv0'>";
+      var str = "<h3 class='light-blue mt0'>Locations</h3><ul class='gray list pl0 mv0'>";
       for (var i = 0; i < cityArr.length; i++) {
         var city = cityArr[i];
         str += "<li class='mb2'><span class='b'>" + city.name + ":</span> " + city.count +  "</li>";
