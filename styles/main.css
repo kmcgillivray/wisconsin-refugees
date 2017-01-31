@@ -7,3 +7,10 @@ svg {
 circle {
   cursor: pointer;
 }
+.noUi-connect {
+  background: rgba(150, 204, 255, 0.5);
+  box-shadow: none;
+}
+.noUi-horizontal .noUi-tooltip {
+  bottom: -150%;
+}

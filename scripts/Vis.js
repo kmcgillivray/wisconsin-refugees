@@ -36,13 +36,13 @@ function Vis(className, isProportional) {
       }
     })();
 
-    view.yearDisplay.innerText = (function() {
+    view.yearDisplay.innerHTML = (function() {
       var startYear = query.years.startYear;
       var endYear = query.years.endYear;
       if (startYear != endYear) {
-        return query.years.startYear + "—" + query.years.endYear;
+        return "From <span class='b light-blue'>" + query.years.startYear + "—" + query.years.endYear + "</span>";
       } else {
-        return query.years.startYear;
+        return "In <span class='b light-blue'>" + query.years.startYear + "</span>";
       }
     })();
 
@@ -122,11 +122,11 @@ function Vis(className, isProportional) {
                   }
                 })
                .text(function(d) {
-                 return d.name;
+                 return d.name + " (" + d.count + ")";
                })
                .style("opacity", 0.0);
 
-     markersEnter.append("circle")
+    markersEnter.append("circle")
           .attr("cy", function(d) {
             var coordinates = citiesObj[d.name];
             if (coordinates) {

@@ -25,6 +25,12 @@
 //   Draw maps
 //   Do first query
 
+// Slider for years. How to filter out countries that weren't part of those years?
+// Animate circle changes
+// Style hovers better
+// Mobile/desktop layout
+// Footer info
+
 var query = null;
 var dataUtils = new DataUtils();
 var view = new View();
@@ -33,6 +39,24 @@ var data = d3.dispatch("load");
 var locationsVis = new Vis('.locations', true);
 
 function init() {
+  noUiSlider.create(view.yearSlider, {
+  	start: [2002, 2016],
+    tooltips: [ wNumb({ decimals: 0 }), wNumb({ decimals: 0 }) ],
+  	connect: true,
+  	range: {
+  		'min': 2002,
+  		'max': 2016
+  	}
+  });
+
+  view.yearSlider.noUiSlider.on("slide", function(values) {
+    console.log(values);
+    var startYear = parseFloat(values[0]);
+    var endYear = parseFloat(values[1]);
+    query.years.startYear = Math.round(startYear);
+    query.years.endYear = Math.round(endYear);
+    query.query();
+  });
   var dataFile = 'data/2002-2017-wisconsin-refugees-arrivals-by-destination-and-nationality.csv';
 
   d3.csv(dataFile, function(error, d) {

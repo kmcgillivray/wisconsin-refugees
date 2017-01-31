@@ -9,6 +9,7 @@ function View() {
   this.highestCityCount = document.getElementById("highest-city-count");
   this.highestNationalityName = document.getElementById("highest-nationality");
   this.highestNationalityCount = document.getElementById("highest-nationality-count");
+  this.yearSlider = document.getElementById("slider");
 }
 
 View.prototype.drawMaps = function() {
