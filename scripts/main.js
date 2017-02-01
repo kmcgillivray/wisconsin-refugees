@@ -26,11 +26,13 @@
 //   Do first query
 
 // Style hovers better
+// add executive order filter
+// Fix circle cutoff
+
 // Don't filter countries out of results arrays so that we can draw one circle/keep all countries in dropdown?
 // Animate circle changes
 // Toggle between range and single year slider
 // bar charts for boxes?
-// toggle between cities and nationalities
 
 var query = null;
 var dataUtils = new DataUtils();
