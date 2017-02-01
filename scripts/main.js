@@ -1,30 +1,3 @@
-// Pick a year, pick a nationality, or all years, all nationalities, or set of years and nationalities
-
-// Query functions
-//   Query
-//   getNationalityData
-//   getYearData
-
-// Data utilities
-//   generateDataObject
-//   listCities
-//   countTotals
-//   convertToArray
-
-// View functions
-//   drawMaps
-//   drawResults / writeData
-//   prepareCanvases
-
-// Vis
-
-
-// Setup steps
-//   Load data
-//   Prepare canvases
-//   Draw maps
-//   Do first query
-
 // Style hovers better
 // add executive order filter
 // Fix circle cutoff
