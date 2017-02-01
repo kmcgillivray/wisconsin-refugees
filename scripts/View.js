@@ -22,10 +22,11 @@ function View() {
 
   this.selectAll = document.getElementById("select-all");
   this.selectNone = document.getElementById("select-none");
+  this.selectBan = document.getElementById("select-ban");
 
   this.visContainer = document.getElementById("vis-container");
   this.width = this.visContainer.offsetWidth;
-  this.height = this.visContainer.offsetWidth + 20;
+  this.height = this.visContainer.offsetWidth + 100;
 
   this.countriesList = document.getElementById("countries-list");
   this.citiesList = document.getElementById("cities-list");

@@ -34,7 +34,7 @@ circle {
   height: 100vh;
 }
 #nationalities-list {
-  height: 95%;
+  height: 90%;
   overflow-y: scroll;
 }
 @media(min-width: 60em) {

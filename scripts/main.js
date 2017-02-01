@@ -1,7 +1,3 @@
-// Style hovers better
-// add executive order filter
-// Fix circle cutoff
-
 // Don't filter countries out of results arrays so that we can draw one circle/keep all countries in dropdown?
 // Animate circle changes
 // Toggle between range and single year slider
@@ -69,6 +65,16 @@ function setupMenu() {
   });
   view.selectNone.addEventListener("click", function() {
     toggleSelection(false);
+  });
+  view.selectBan.addEventListener("click", function() {
+    var banList = ["Iran", "Iraq", "Syria", "Sudan", "Libya", "Yemen", "Somalia"];
+    for (var i = 0; i < view.nationalitySelect.length; i++) {
+      view.nationalitySelect[i].checked = false;
+      if (banList.includes(view.nationalitySelect[i].value)) {
+        view.nationalitySelect[i].checked = true;
+      }
+    }
+    updateNationalities();
   });
 
   view.nationalitiesToggle.addEventListener("click", function() {

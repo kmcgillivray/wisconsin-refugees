@@ -173,18 +173,20 @@ function Vis(className, isProportional) {
                 .attr("x", function(d) {
                   var coordinates = citiesObj[d.name];
                   if (coordinates) {
-                    return coordinates[0] + "px";
+                    return coordinates[0] + 10 + "px";
                   }
                 })
                 .attr("y", function(d) {
                   var coordinates = citiesObj[d.name];
                   if (coordinates) {
-                    return coordinates[1] + "px";
+                    return coordinates[1] - 10 + "px";
                   }
                 })
                .text(function(d) {
                  return d.name + " (" + d.count + ")";
                })
+               .style("font-weight", "bold")
+               .style("fill", "#317ec6")
                .style("opacity", 0.0);
 
     markersEnter.append("circle")
