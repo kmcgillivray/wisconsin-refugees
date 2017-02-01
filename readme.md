@@ -2,7 +2,7 @@
 
 This is an interactive data visualization of refugee resettlements in Wisconsin from 2002-2016.
 
-![Preview screenshot](http://kevinmcgillivray.net/wisconsin-refugees/images/preview.png)
+[![Preview screenshot](http://kevinmcgillivray.net/wisconsin-refugees/images/preview.png)](http://kevinmcgillivray.net/wisconsin-refugees)
 
 ## Sources
 
