@@ -37,7 +37,10 @@ circle {
   height: 90%;
   overflow-y: scroll;
 }
-@media(min-width: 60em) {
+@media(min-width: 30em) {
+  #nationalities-menu {
+    height: auto;
+  }
   #nationalities-list {
     height: 370px;
   }

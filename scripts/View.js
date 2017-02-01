@@ -25,8 +25,13 @@ function View() {
   this.selectBan = document.getElementById("select-ban");
 
   this.visContainer = document.getElementById("vis-container");
-  this.width = this.visContainer.offsetWidth;
-  this.height = this.visContainer.offsetWidth + 100;
+  var width = this.visContainer.offsetWidth;
+  var height = this.visContainer.offsetWidth;
+  if (window.innerWidth > 680) {
+    height += 100;
+  }
+  this.width = width;
+  this.height = height;
 
   this.countriesList = document.getElementById("countries-list");
   this.citiesList = document.getElementById("cities-list");
