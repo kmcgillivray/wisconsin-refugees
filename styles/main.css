@@ -2,7 +2,7 @@ circle {
   cursor: pointer;
 }
 .noUi-connect {
-  background: #96ccff;
+  background: #00449e;
   box-shadow: none;
 }
 .noUi-horizontal {
@@ -10,17 +10,17 @@ circle {
 }
 .noUi-horizontal .noUi-tooltip {
   bottom: -170%;
-  color: #96ccff;
+  color: #333;
   font-weight: bold;
   font-size: 1rem;
-  border: 3px solid #96ccff;
+  border: 3px solid #333;
 }
 .noUi-horizontal .noUi-handle {
   height: 30px;
   width: 30px;
   left: -15px;
   top: -10px;
-  border: 3px solid #96ccff;
+  border: 3px solid #333;
 }
 .noUi-handle:after, .noUi-handle:before {
   display: none;
@@ -51,6 +51,7 @@ circle {
 }
 #nationalities-list::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: rgba(150, 204, 255, 0.5);
+    background-color: #00449e;
+    opacity: 0.2;
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }

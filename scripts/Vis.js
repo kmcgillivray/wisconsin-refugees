@@ -56,9 +56,9 @@ function Vis(className, isProportional) {
       var startYear = query.years.startYear;
       var endYear = query.years.endYear;
       if (startYear != endYear) {
-        return "From <span class='b light-blue'>" + query.years.startYear + "—" + query.years.endYear + "</span>";
+        return "From <span class='b dark-blue'>" + query.years.startYear + "—" + query.years.endYear + "</span>";
       } else {
-        return "In <span class='b light-blue'>" + query.years.startYear + "</span>";
+        return "In <span class='b dark-blue'>" + query.years.startYear + "</span>";
       }
     })();
 
@@ -67,7 +67,7 @@ function Vis(className, isProportional) {
       nationalityArr.sort(function(a,b) {
         return b.count - a.count;
       });
-      var str = "<h3 class='light-blue mt0'>Nationalities</h3><ul class='gray list pl0 mv0'>";
+      var str = "<h3 class='dark-blue mt0'>Nationalities</h3><ul class='gray list pl0 mv0'>";
       for (var i = 0; i < nationalityArr.length; i++) {
         var country = nationalityArr[i];
         if (country.count > 0) {
@@ -83,7 +83,7 @@ function Vis(className, isProportional) {
       cityArr.sort(function(a,b) {
         return b.count - a.count;
       });
-      var str = "<h3 class='light-blue mt0'>Locations</h3><ul class='gray list pl0 mv0'>";
+      var str = "<h3 class='dark-blue mt0'>Locations</h3><ul class='gray list pl0 mv0'>";
       for (var i = 0; i < cityArr.length; i++) {
         var city = cityArr[i];
         str += "<li class='mb2'><span class='b'>" + city.name + ":</span> " + city.count +  "</li>";
@@ -217,8 +217,8 @@ function Vis(className, isProportional) {
              return 0;
            }
          })
-         .style("fill", "rgba(150, 204, 255, 0.5)")
-         .style("stroke", "#317ec6")
+         .style("fill", "rgba(0, 68, 158, 0.5)")
+         .style("stroke", "#00449e")
          .style("stroke-width", "2px")
          .style("opacity", 0.5);
     });

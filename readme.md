@@ -17,6 +17,8 @@ This project uses...
 * [noUiSlider](https://refreshless.com/nouislider/) for the fancy year slider.
 * And otherwise vanilla JavaScript, HTML, and CSS.
 
+See [this post](https://www.kevinmcgillivray.net/wisconsin-refugees-development-notes/) for more development notes.
+
 ## Contributing
 
 Open an issue with suggestions or fork the project and make a pull request! [Get in touch](http://twitter.com/kev_mcg) if you're not sure how to do that.
