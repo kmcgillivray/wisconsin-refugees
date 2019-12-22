@@ -2,7 +2,7 @@ function Query(data, years, nationalities) {
   this.dataset = data;
   this.years = years || {
     startYear: 2002,
-    endYear: 2016
+    endYear: 2019
   };
   this.nationalities = nationalities;
   this.cityArr = null;

@@ -10,7 +10,7 @@ var data = d3.dispatch("load");
 var locationsVis = null;
 
 function loadData() {
-  var dataFile = 'data/2002-2017-wisconsin-refugees-arrivals-by-destination-and-nationality.csv';
+  var dataFile = 'data/2002-2019-wisconsin-refugees-arrivals-by-destination-and-nationality.csv';
 
   d3.csv(dataFile, function(error, d) {
     if (error) { throw error; }

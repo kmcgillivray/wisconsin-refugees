@@ -62,12 +62,12 @@ View.prototype.drawMaps = function() {
 
 View.prototype.createSlider = function(element) {
   noUiSlider.create(element, {
-    start: [2002, 2016],
+    start: [2002, 2019],
     tooltips: [ wNumb({ decimals: 0 }), wNumb({ decimals: 0 }) ],
     connect: true,
     range: {
       'min': 2002,
-      'max': 2016
+      'max': 2019
     }
   });
 }

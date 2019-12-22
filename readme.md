@@ -1,6 +1,6 @@
-# [Refugee Resettlement in Wisconsin, 2002–2016](http://kevinmcgillivray.net/wisconsin-refugees)
+# [Refugee Resettlement in Wisconsin, 2019](http://kevinmcgillivray.net/wisconsin-refugees)
 
-This is an interactive data visualization of refugee resettlements in Wisconsin from 2002-2016.
+This is an interactive data visualization of refugee resettlements in Wisconsin from 2002-2019.
 
 [![Preview screenshot](http://kevinmcgillivray.net/wisconsin-refugees/images/preview.png)](http://kevinmcgillivray.net/wisconsin-refugees)
 
